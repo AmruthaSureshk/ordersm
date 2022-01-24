@@ -18,6 +18,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+#http://127.0.0.1:8000/shop will give the website
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shop/', include('shop.urls')),
