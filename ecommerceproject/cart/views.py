@@ -4,6 +4,7 @@ from .models import Cart,CartItem
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
+
 def _cart_id(request):
     cart=request.session.session_key
     if not cart:
@@ -63,5 +64,6 @@ def full_remove(request,product_id):
     cart_item = CartItem.objects.get(product=product, cart=cart)
     cart_item.delete()
     return redirect('cart:cart_detail')
+
 
 
